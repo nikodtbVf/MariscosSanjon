@@ -1,3 +1,3 @@
 class Category < ActiveRecord::Base
-	validates_presence_of :name, :message => "No puede estar en blanco" 
+	validates_presence_of :name, :message => "El nombre no puede estar en blanco" 
 end

@@ -6,15 +6,14 @@
             <div id="error_explanation">
               <h2><%= pluralize(@category.errors.count, "error") %> , el elemento no puede ser guardado</h2>
               <ul class="collection">
-              <% @category.errors.full_messages.each do |message| %>
-                  <li class="collection-item"><%= message %></li>
-              <% end %>
+                <% @category.errors.each do |attr,msg|  %>
+                   <li class="collection-item">  <%=msg%> </li>
+                <% end %>
               </ul>
             </div>
           <% end %>
           <div class="row ">
               <div class="input-field col s6">
-                
                   <i class="material-icons prefix">account_circle</i>
                   <%= f.text_field :name  ,class: "validate", id: "icon_prefix" %>
                   <label for="icon_prefix">Nombre</label>
